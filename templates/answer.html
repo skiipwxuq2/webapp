@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Сайт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/ans.css') }}">
+</head>
+
+<body>
+    <table class="table-fill">
+        <thead>
+            <tr>
+                <th class="text-center">Id</th>
+                <th class="text-center">Img</th>
+                <th class="text-center">First Name</th>
+                <th class="text-center">Last Name</th>
+                <th class="text-center">Date</th>
+                <th class="text-center">City</th>
+                <th class="text-center">Gender</th>
+                <th class="text-center">Kids</th>
+                <th class="text-center">About</th>
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            {% for obj in array %}
+            <tr>
+                <td class="text-center">
+                    {{obj[0]}}
+                </td>
+                <td class="text-center">
+                    <img width="150px" height="150px" src="{{ url_for('static', filename='uploads/' + obj[1]) }}" alt="Static Image">
+                </td>
+                <td class="text-center">
+                    {{obj[2]}}
+                </td>
+                <td class="text-center">
+                    {{obj[3]}}
+                </td>
+                <td class="text-center">
+                    {{obj[4]}}
+                </td>
+                <td class="text-center">
+                    {{obj[5]}}
+                </td>
+                <td class="text-center">
+                    {{obj[6]}}
+                </td>
+                <td class="text-center">
+                    {{obj[7]}}
+                </td>
+                <td class="text-center">
+                    {{obj[8]}}
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+
+</html>

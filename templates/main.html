@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Сайт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" action="test" method="post" enctype="multipart/form-data">
+                <p><b><h2>Ваша Анкета на Сайті Знайомств</h2></b></p>
+                <input type="file" name="file" accept="image/*" required>
+                <input name="first_name" type="text" placeholder="Ваше ім'я" />
+                <input name="last_name" type="text" placeholder="Ваше різвище" />
+                <input name="date" type="text" placeholder="Ваш вік" />
+                <input name="city" type="text" placeholder="Місто" />
+                <input name="gender" type="text" placeholder="Ваша стать" />
+                <input name="kids" type="text" placeholder="Діти (якщо є, пишіть їх кількість)" />
+                <input name="about" type="text" placeholder="Про себе" />
+                <input type="submit" class="button" value="Надіслати">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
